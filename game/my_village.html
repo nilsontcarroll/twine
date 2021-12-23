@@ -36,17 +36,38 @@ background-image: url("https://nilsontcarroll.github.io/twine/images/wall.gif");
    background-repeat: no-repeat;
   background-size:cover;
 }
-</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="intro" tags="begin" position="366,29" size="100,100">&lt;span style=&quot;background-color: #101213&quot;&gt;Each day, I wake up and go outside.
+
+tw-story[tags~="village"] {
+background-image: url("https://nilsontcarroll.github.io/twine/images/temple_bg.gif");
+   background-repeat: no-repeat;
+  background-size:cover;
+}
+
+tw-story[tags~="trees"] {
+background-image: url("https://nilsontcarroll.github.io/twine/images/trees_bg.gif");
+   background-repeat: no-repeat;
+  background-size:cover;
+}
+
+tw-story[tags~="water"] {
+background-image: url("https://nilsontcarroll.github.io/twine/images/water_bg.gif");
+   background-repeat: no-repeat;
+  background-size:cover;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript">var audio= document.createElement('audio');
+audio.src=
+	'https://nilsontcarroll.github.io/twine/images/audio.mp3';
+audio.loop = true;
+audio.play();</script><tw-passagedata pid="1" name="intro" tags="begin" position="366,29" size="100,100">&lt;span style=&quot;background-color: #101213&quot;&gt;Each day, I wake up and go outside.
 
 I see my [[village-&gt;neighborhood]].
-&lt;!-- Place the following in your startup tagged passage. --&gt;
 
-&lt;!-- Place the following in the passage where the event happens --&gt;
 (if: $event is 1)[It is gray above my home.]
-(elseif: $event is 2)[The sun shines.]
+(elseif: $event is 2)[Pools of water fill the holes in the ground.]
 (elseif: $event is 3)[A frost covers the ground.]
 &lt;/span&gt;
-</tw-passagedata><tw-passagedata pid="2" name="neighborhood" tags="" position="366,204" size="100,100">Within this place:
+</tw-passagedata><tw-passagedata pid="2" name="neighborhood" tags="village" position="365,183" size="100,100">&lt;img src=&quot;https://nilsontcarroll.github.io/twine/images/wall.gif&quot; width=100%&gt;
+
+&lt;span style=&quot;background-color: #101213&quot;&gt;Within this place:
 
 (if:$basket is false)[there is a [[temple-&gt;temple]] surrounded by strange plants] (if:$basket is true)[there is a [[temple-&gt;temple2]] surrounded by strange plants]
 
@@ -56,19 +77,23 @@ and a small [[tree-&gt;tree]] on a hill.
 
 (if: $basket is true)[I have a basket]
 (if:$water &gt;= 1)[I have $water bowl&#39;s worth of life water]
-&lt;img src=&quot;https://nilsontcarroll.github.io/twine/images/wall.gif&quot; width=100%&gt;</tw-passagedata><tw-passagedata pid="3" name="pool" tags="" position="557,192" size="100,100">I wade into the pool.
+&lt;img src=&quot;https://nilsontcarroll.github.io/twine/images/wall.gif&quot; width=100%&gt;
+&lt;/span&gt;
+
+&lt;img src=&quot;https://nilsontcarroll.github.io/twine/images/wall.gif&quot; width=100%&gt;
+&lt;/span&gt;</tw-passagedata><tw-passagedata pid="3" name="pool" tags="water" position="557,192" size="100,100">&lt;span style=&quot;background-color: #101213&quot;&gt;I wade into the pool.
 
 A water fairy is tending to her crops on the pool&#39;s surface.
 
 (if: $basket is true)[She offers some life water to me. She pours it into the basket. (set: $water to it + 1)]
 
-I [[leave-&gt;neighborhood]] the pool.</tw-passagedata><tw-passagedata pid="4" name="temple" tags="" position="138,171" size="100,100">(set: $basket to true)
+I [[leave-&gt;neighborhood]] the pool.&lt;/span&gt;</tw-passagedata><tw-passagedata pid="4" name="temple" tags="trees" position="139,157" size="100,100">&lt;span style=&quot;background-color: #101213&quot;&gt;(set: $basket to true)
 &lt;img src=&quot;https://nilsontcarroll.github.io/twine/images/temple.gif&quot; width=100%&gt;
 I approach the temple.
 
 Inside, a monk is weaving a basket. She greets me and hands me the basket.
 
-I [[leave-&gt;neighborhood]] the temple.</tw-passagedata><tw-passagedata pid="5" name="tree" tags="" position="309,383" size="100,100">I approach the lone tree on the hill. 
+I [[leave-&gt;neighborhood]] the temple.&lt;/span&gt;</tw-passagedata><tw-passagedata pid="5" name="tree" tags="" position="309,383" size="100,100">&lt;span style=&quot;background-color: #101213&quot;&gt;I approach the lone tree on the hill. 
 
 (if: $tree is 0)[It has no leaves.]
 (if: $tree is 1)[It has a few leaves on it.
@@ -83,14 +108,14 @@ I [[leave-&gt;neighborhood]] the temple.</tw-passagedata><tw-passagedata pid="5"
 
 [[Leave it alone and return-&gt;neighborhood]]]
 
-(if: $water is 0)[I [[leave-&gt;neighborhood]] the tree.]</tw-passagedata><tw-passagedata pid="6" name="temple2" tags="" position="141,295" size="100,100">I re-enter the temple.
+(if: $water is 0)[I [[leave-&gt;neighborhood]] the tree.]&lt;/span&gt;</tw-passagedata><tw-passagedata pid="6" name="temple2" tags="trees" position="141,295" size="100,100">&lt;span style=&quot;background-color: #101213&quot;&gt;&lt;img src=&quot;https://nilsontcarroll.github.io/twine/images/temple.gif&quot; width=100%&gt;I re-enter the temple.
 
 Inside, a monk is weaving more baskets.
 
-I [[leave-&gt;neighborhood]] the temple.</tw-passagedata><tw-passagedata pid="7" name="Pour some water" tags="" position="456,380" size="100,100">(set: $tree to it + 1)(set: $water to it -1)
+I [[leave-&gt;neighborhood]] the temple.&lt;/span&gt;</tw-passagedata><tw-passagedata pid="7" name="Pour some water" tags="" position="504,375" size="100,100">&lt;span style=&quot;background-color: #101213&quot;&gt;(set: $tree to it + 1)(set: $water to it -1)
 I pour out some life water on to the tree&#39;s base.
 
-I [[leave-&gt;neighborhood]] the tree.</tw-passagedata><tw-passagedata pid="8" name="startup" tags="startup" position="224,28" size="100,100">{
+I [[leave-&gt;neighborhood]] the tree.&lt;/span&gt;</tw-passagedata><tw-passagedata pid="8" name="startup" tags="startup" position="224,28" size="100,100">{
 (set: $event to (random: 1, 3))
 (set: $basket to false)
 (set: $water to 0)
